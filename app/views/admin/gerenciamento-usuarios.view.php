@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <?php if($pagination){require('app/views/components/sidebar.php');} ?>
+
     <header>
         <h1>Gerenciamento de Funcionários</h1>
     </header>

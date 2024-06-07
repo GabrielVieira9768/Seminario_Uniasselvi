@@ -1,4 +1,4 @@
-<nav aria-label="Page navigation d-flex justify-content-center">
+<nav aria-label="Page navigation" class="d-flex justify-content-center">
     <ul class="pagination">
         <li class="page-item <?= $page <= 1 ? "disabled" : "" ?>">
             <a class="page-link" href="?pagina=<?= $page - 1 ?>" aria-label="Previous">

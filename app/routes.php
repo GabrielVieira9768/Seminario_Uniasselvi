@@ -9,4 +9,8 @@ use App\Controllers\UserController;
     $router->post('usuarios/update', 'UserController@update');
     $router->post('usuarios/delete', 'UserController@delete');
 
+    // Rotas para o gerenciamento de posts
+
+    // Rotas para autenticação
+
 ?>
