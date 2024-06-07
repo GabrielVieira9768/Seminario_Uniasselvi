@@ -10,7 +10,7 @@
 ## Subir Database
   - Acesse o http://localhost/phpmyadmin depois do Apache estar iniciado no xampp
   - Crie o database com nome repositorio_base
-  - Depois vã na aba import e coloque o .sql lá
+  - Depois vá na aba import e coloque o .sql lá
 ## Acessando
   - Abra o Xampp
   - Aperta start em Apache e em Mysql
