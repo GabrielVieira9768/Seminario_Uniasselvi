@@ -32,7 +32,7 @@
                     <td><?php echo $user->id; ?></td>
                     <td><?php echo $user->name; ?></td>
                     <td><?php echo $user->email; ?></td>
-                    <td>
+                    <td class="d-flex align-items-center">
                         <div>
                             <button type="button" class="btn" title="Visualizar Informações" data-bs-toggle="modal" data-bs-target="#modal-show-<?php echo $user->id; ?>">
                                 <span>Show</span>
@@ -44,6 +44,12 @@
                                 <span>Edit</span>
                             </button>
                             <?php require('app/views/components/modal/users/update.php'); ?>
+                        </div>
+                        <div>
+                            <button type="button" class="btn" title="Editar Informações" data-bs-toggle="modal" data-bs-target="#modal-delete-<?php echo $user->id; ?>">
+                                <span>Deletar</span>
+                            </button>
+                            <?php require('app/views/components/modal/users/delete.php'); ?>
                         </div>
                     </td>
                 </tr>

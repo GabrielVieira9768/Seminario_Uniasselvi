@@ -3,7 +3,7 @@
         <div class="modal-content">
             <form action="/usuarios/update" method="POST">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Funcionário</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Informações</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -29,6 +29,7 @@
                         <label for="password" class="form-label">Senha</label>
                         <input value="<?php echo $user->password; ?>"" type=" password" name="password" class="form-control" id="password">
                     </div>
+                    <input type="hidden" name="id" value="<?= $user->id ?>">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn" data-bs-dismiss="modal">Fechar</button>

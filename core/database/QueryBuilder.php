@@ -67,7 +67,7 @@ class QueryBuilder
         }
     }
 
-    public function edit($table,$id, $parametros)
+    public function edit($table, $id, $parametros)
     {
         $sql = sprintf(
             'UPDATE %s 
@@ -87,6 +87,23 @@ class QueryBuilder
             $statement->execute($parametros);
         } catch(Exception $e) {
             die("Ocorreu um erro ao tentar atualizar o banco de dados: {$e->getMessage()}");
+        }
+    }
+
+    public function delete($table, $id)
+    {
+        $sql = sprintf(
+            'DELETE FROM %s WHERE %s;',
+            $table,
+            "id = :id"
+        );
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute(compact('id'));
+        } catch (Exception $e) {
+            die("Ocorreu um erro ao tentar deletar no banco de dados: {$e->getMessage()}");
         }
     }
 }

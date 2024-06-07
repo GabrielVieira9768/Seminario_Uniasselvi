@@ -64,6 +64,12 @@ class UserController
 
         header('Location: /usuarios');
     }
+
+    public function delete()
+    {
+        App::get('database')->delete('users', $_POST['id']);
+        header('Location: /usuarios');
+    }
 }
 
 ?>
