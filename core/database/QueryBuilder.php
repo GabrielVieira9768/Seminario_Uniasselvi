@@ -106,4 +106,20 @@ class QueryBuilder
             die("Ocorreu um erro ao tentar deletar no banco de dados: {$e->getMessage()}");
         }
     }
+
+    public function busca($table, $pesquisa, $campo){
+        $sql = "SELECT * FROM {$table} WHERE {$campo} LIKE '%$pesquisa%'";
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute();
+
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $resultado = json_encode($result);
+            return json_decode($resultado);
+
+        } catch (Exception $e) {
+            die("Ocorreu um erro ao tentar percorrer o banco de dados: {$e->getMessage()}");
+        }
+    }
 }

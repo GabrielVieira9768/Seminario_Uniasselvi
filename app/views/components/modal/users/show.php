@@ -8,20 +8,20 @@
             <div class="modal-body">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nome</label>
-                    <input value="<?php echo $user->name; ?>" type="text" name="name" class="form-control" id="name">
+                    <input value="<?php echo $user->name; ?>" type="text" name="name" class="form-control" id="name" readonly>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input value="<?php echo $user->email; ?>"" type=" email" name="email" class="form-control" id="email">
+                    <input value="<?php echo $user->email; ?>"" type=" email" name="email" class="form-control" id="email" readonly>
                 </div>
                 <div class="mb-3 d-flex justify-content-between">
                     <div>
                         <label for="cpf" class="form-label">CPF</label>
-                        <input value="<?php echo $user->cpf; ?>"" type=" text" name="cpf" class="form-control" id="cpf">
+                        <input value="<?php echo $user->cpf; ?>"" type=" text" name="cpf" class="form-control" id="cpf" readonly>
                     </div>
                     <div>
                         <label for="phone" class="form-label">Telefone</label>
-                        <input value="<?php echo $user->phone; ?>"" type=" text" name="phone" class="form-control" id="phone">
+                        <input value="<?php echo $user->phone; ?>"" type=" text" name="phone" class="form-control" id="phone" readonly>
                     </div>
                 </div>
                 <div class="mb-3">

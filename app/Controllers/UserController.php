@@ -31,8 +31,9 @@ class UserController
 
         $users = App::get('database')->selectAll('users', $start, $itensPage);
         $total_pages = ceil($rows_count/$itensPage);
+        $pagination = true;
 
-        return view('admin/gerenciamento-usuarios', compact('users','page','total_pages'));
+        return view('admin/gerenciamento-usuarios', compact('users','page','total_pages', 'pagination'));
     }
 
     public function create()
@@ -69,6 +70,16 @@ class UserController
     {
         App::get('database')->delete('users', $_POST['id']);
         header('Location: /usuarios');
+    }
+
+    public function search()
+    {
+        $pesquisa = filter_input(INPUT_GET,'search');
+
+        $users = App::get('database')->busca('users', $pesquisa, 'name');
+        $pagination = false;
+
+        return view("admin/gerenciamento-usuarios", compact('users', 'pagination'));
     }
 }
 
