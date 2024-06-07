@@ -66,4 +66,27 @@ class QueryBuilder
             die("Ocorreu um erro ao tentar inserir no banco de dados: {$e->getMessage()}");
         }
     }
+
+    public function edit($table,$id, $parametros)
+    {
+        $sql = sprintf(
+            'UPDATE %s 
+            SET %s
+            WHERE %s;',
+            $table,
+            implode(', ', array_map(function ($parametros) {
+                return "{$parametros} = :{$parametros}";
+            }, array_keys($parametros))),
+            'id = :id'
+        );
+
+        $parametros['id'] = $id;
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($parametros);
+        } catch(Exception $e) {
+            die("Ocorreu um erro ao tentar atualizar o banco de dados: {$e->getMessage()}");
+        }
+    }
 }

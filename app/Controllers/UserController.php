@@ -44,8 +44,23 @@ class UserController
             'cpf' => $_POST['cpf'],
             'phone' => $_POST['phone'],
         ];
-        
+
         App::get('database')->insert('users', $parameters);
+
+        header('Location: /usuarios');
+    }
+
+    public function update()
+    {
+        $parameters = [
+            'name' => $_POST['name'],
+            'email' => $_POST['email'],
+            'password' => $_POST['password'],
+            'cpf' => $_POST['cpf'],
+            'phone' => $_POST['phone'],
+        ];
+        
+        app::get('database')->edit('users', $_POST['id'], $parameters);
 
         header('Location: /usuarios');
     }

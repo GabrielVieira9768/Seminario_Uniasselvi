@@ -14,7 +14,6 @@
         <button type="button" class="btn" title="Cadastrar Novo Funcionário" data-bs-toggle="modal" data-bs-target="#modal-adicionar">
             <span>Adicionar Funcionário</span>
         </button>
-
         <?php require('app/views/components/modal/users/create.php'); ?>
     </div>
 
@@ -33,7 +32,20 @@
                     <td><?php echo $user->id; ?></td>
                     <td><?php echo $user->name; ?></td>
                     <td><?php echo $user->email; ?></td>
-                    <td></td>
+                    <td>
+                        <div>
+                            <button type="button" class="btn" title="Visualizar Informações" data-bs-toggle="modal" data-bs-target="#modal-show-<?php echo $user->id; ?>">
+                                <span>Show</span>
+                            </button>
+                            <?php require('app/views/components/modal/users/show.php'); ?>
+                        </div>
+                        <div>
+                            <button type="button" class="btn" title="Editar Informações" data-bs-toggle="modal" data-bs-target="#modal-update-<?php echo $user->id; ?>">
+                                <span>Edit</span>
+                            </button>
+                            <?php require('app/views/components/modal/users/update.php'); ?>
+                        </div>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
