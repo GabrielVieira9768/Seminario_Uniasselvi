@@ -18,8 +18,7 @@ class QueryBuilder
     {
         $sql = "select * from {$table}";
 
-        if($start >= 0 && $itensPage > 0)
-        {
+        if($start >= 0 && $itensPage > 0) {
             $sql .= " LIMIT {$start}, {$itensPage}";
         }
 
@@ -48,6 +47,23 @@ class QueryBuilder
 
         } catch (Exception $e) {
             die("Ocorreu um erro ao tentar contar pelo banco de dados: {$e->getMessage()}");
+        }
+    }
+
+    public function insert($table, $parameters)
+    {
+        $sql = sprintf(
+            'INSERT INTO %s (%s) VALUES (%s)',
+            $table , implode(', ', array_keys($parameters)),
+             ':' . implode(', :', array_keys($parameters))
+        );
+
+        try {
+            $stnt = $this->pdo->prepare($sql);
+            $stnt->execute($parameters);
+
+        } catch (Exception $e) {
+            die("Ocorreu um erro ao tentar inserir no banco de dados: {$e->getMessage()}");
         }
     }
 }

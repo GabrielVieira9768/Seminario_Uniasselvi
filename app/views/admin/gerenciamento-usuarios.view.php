@@ -7,9 +7,17 @@
 </head>
 <body>
     <header>
-        <h1>Gerenciamento de Usuários</h1>
+        <h1>Gerenciamento de Funcionários</h1>
     </header>
     
+    <div>
+        <button type="button" class="btn" title="Cadastrar Novo Funcionário" data-bs-toggle="modal" data-bs-target="#modal-adicionar">
+            <span>Adicionar Funcionário</span>
+        </button>
+
+        <?php require('app/views/components/modal/users/create.php'); ?>
+    </div>
+
     <table class="table table-hover">
         <thead>
             <tr>
@@ -35,4 +43,5 @@
     <?php require('app/views/components/pagination.php'); ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../../public/js/modals.js"></script>
 </html>
