@@ -2,6 +2,6 @@
 
 use App\Controllers\UserController;
 
-    $router->get('', 'UserController@index');
+    $router->get('usuarios', 'UserController@index');
 
 ?>

@@ -11,7 +11,7 @@ class UserController
     public function index()
     {
         $users = App::get('database')->selectAll('users');
-        return view('site/index', compact('users'));
+        return view('admin/gerenciamento-usuarios', compact('users'));
     }
 }
 
