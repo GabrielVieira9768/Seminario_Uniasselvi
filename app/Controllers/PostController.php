@@ -35,6 +35,12 @@ class PostController
         return view('admin/gerenciamento-posts', compact('posts','page','total_pages', 'pagination'));
     }
 
+    public function indexPosts()
+    {
+        $posts = App::get('database')->lastFive('posts');
+        return view('site/index', compact('posts'));
+    }
+
     public function create()
     {
         $arquivo = $_FILES['image']['name'];

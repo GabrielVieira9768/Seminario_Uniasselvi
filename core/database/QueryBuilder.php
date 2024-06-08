@@ -129,4 +129,36 @@ class QueryBuilder
             die("Ocorreu um erro ao tentar percorrer o banco de dados: {$e->getMessage()}");
         }
     }
+
+    public function check($table, $email, $password)
+    {
+        $sql = sprintf('SELECT * FROM %s WHERE email = :email and password = :password', $table);
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':password', $password);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die("Ocorreu um erro ao tentar comparar os dados: {$e->getMessage()}");
+        }
+    }
+
+    public function lastFive($table)
+    {
+        $sql = sprintf("SELECT * FROM %s ORDER BY %s desc LIMIT %s", $table, 'id', "5");
+        
+        try {
+            $stat = $this->pdo->prepare($sql);
+
+            $stat->execute();
+
+            return $stat->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
