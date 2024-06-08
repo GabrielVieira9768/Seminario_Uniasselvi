@@ -76,6 +76,7 @@ class UserController
         $pesquisa = filter_input(INPUT_GET,'search');
 
         $users = App::get('database')->busca('users', $pesquisa, 'name');
+        
         $pagination = false;
 
         return view("admin/gerenciamento-usuarios", compact('users', 'pagination'));

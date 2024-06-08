@@ -100,6 +100,19 @@ class PostController
 
         header('Location: /posts');
     }
+
+    public function search()
+    {
+        $pesquisa = filter_input(INPUT_GET,'search');
+
+        $postsByTitle = App::get('database')->busca('posts', $pesquisa, 'title');
+        $postsByAuthor = App::get('database')->busca('posts', $pesquisa, 'author');
+        $posts = array_unique(array_merge($postsByTitle, $postsByAuthor), SORT_REGULAR);
+
+        $pagination = false;
+
+        return view("admin/gerenciamento-posts", compact('posts', 'pagination'));
+    }
 }
 
 ?>
