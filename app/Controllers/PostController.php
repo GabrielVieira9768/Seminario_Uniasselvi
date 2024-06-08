@@ -34,6 +34,26 @@ class PostController
 
         return view('admin/gerenciamento-posts', compact('posts','page','total_pages', 'pagination'));
     }
+
+    public function create()
+    {
+        $arquivo = $_FILES['image']['name'];
+        $novoNome = uniqid();
+        $pasta = 'public/img/';
+        $extencao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
+        $deuCerto = move_uploaded_file($_FILES['image']['tmp_name'], $pasta . $novoNome . "." . $extencao);
+
+        $parameters = [
+            'title' => $_POST['title'],
+            'image' => $pasta . $novoNome . "." . $extencao,
+            'content' => $_POST['content'],
+            'author' => $_POST['author'],
+            'date' => $_POST['date'],
+        ];
+
+        App::get('database')->insert('posts',$parameters);
+        header('location: /posts');
+    }
 }
 
 ?>

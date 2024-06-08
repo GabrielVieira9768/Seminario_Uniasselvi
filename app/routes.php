@@ -12,7 +12,7 @@ use App\Controllers\PostController;
 
     // Rotas para o gerenciamento de posts
     $router->get('posts', 'PostController@index');
-
+    $router->post('posts/create', 'PostController@create');
 
     // Rotas para autenticação
 

@@ -52,7 +52,7 @@
                         <td><?php echo $post->id; ?></td>
                         <td><?php echo $post->title; ?></td>
                         <td><?php echo $post->author; ?></td>
-                        <td><?php echo $post->date; ?></td>
+                        <td><?php echo date('d/m/Y', strtotime($post->date)); ?></td>
                         <td>
                             
                         </td>

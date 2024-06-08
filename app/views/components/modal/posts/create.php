@@ -1,33 +1,34 @@
 <div class="modal fade" id="modal-adicionar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <form action="" method="POST">
+            <form enctype="multipart/form-data" action="/posts/create" method="POST">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Usuário</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar Novo Post</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nome</label>
-                        <input type="text" name="name" class="form-control" id="name">
+                        <label for="title" class="form-label">Título</label>
+                        <input type="text" name="title" class="form-control" id="title">
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" class="form-control" id="email">
+                    <div>
+                        <label for="image" class="form-label">Imagem</label>
+                        <input id="image" type="file" class="form-control" name="image" accept="image/*" onchange="loadFile(event)">
+                        <img id="output" class="img-fluid mb-3 rounded"/>
                     </div>
                     <div class="mb-3 d-flex justify-content-between">
                         <div>
-                            <label for="cpf" class="form-label">CPF</label>
-                            <input type="text" name="cpf" class="form-control" id="cpf">
+                            <label for="author" class="form-label">Autor</label>
+                            <input type="text" name="author" class="form-control" id="author">
                         </div>
                         <div>
-                            <label for="phone" class="form-label">Telefone</label>
-                            <input type="text" name="phone" class="form-control" id="phone">
+                            <label for="date" class="form-label">Data</label>
+                            <input type="date" name="date" class="form-control" id="date">
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Senha</label>
-                        <input type="password" name="password" class="form-control" id="password">
+                        <label for="Content" class="form-label">Conteúdo</label>
+                        <textarea type="text" name="content" class="form-control" id="Content" rows="4" style="resize: none"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -38,3 +39,13 @@
         </div>
     </div>
 </div>
+<script>
+    var loadFile = function(event) {
+        var output = document.getElementById('output');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+        URL.revokeObjectURL(output.src)
+        }
+        document.getElementById('image').style.display = 'none';
+    };
+</script>
