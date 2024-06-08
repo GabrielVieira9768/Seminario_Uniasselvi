@@ -54,6 +54,52 @@ class PostController
         App::get('database')->insert('posts',$parameters);
         header('location: /posts');
     }
+
+    public function delete()
+    {
+        $post = App::get('database')->find('posts', $_POST['id']);
+
+        $imagePath = $post['image'];
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+
+        App::get('database')->delete('posts', $_POST['id']);
+
+        header('Location: /posts');
+    }
+
+    public function update()
+    {
+        $post = App::get('database')->find('posts', $_POST['id']);
+
+        if(isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+            $arquivo = $_FILES['image']['name'];
+
+            $imagePath = $post['image'];
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+
+            $novoNome = uniqid();
+            $pasta = 'public/img/';
+            $extencao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
+            $caminhoNovaImagem = $pasta . $novoNome . "." . $extencao;
+
+            move_uploaded_file($_FILES['image']['tmp_name'], $caminhoNovaImagem);
+
+            $parameters['image'] = $caminhoNovaImagem;
+        }
+
+        $parameters['title'] = $_POST['title'];
+        $parameters['content'] = $_POST['content'];
+        $parameters['author'] = $_POST['author'];
+        $parameters['date'] = $_POST['date'];
+
+        App::get('database')->edit('posts', $_POST['id'], $parameters);
+
+        header('Location: /posts');
+    }
 }
 
 ?>

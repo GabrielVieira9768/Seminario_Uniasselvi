@@ -26,7 +26,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Senha</label>
-                    <input value="<?php echo $user->password; ?>"" type=" password" name="password" class="form-control" id="password">
+                    <input value="<?php echo $user->password; ?>"" type=" password" name="password" class="form-control" id="password" readonly>
                 </div>
             </div>
             <div class="modal-footer">
