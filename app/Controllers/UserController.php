@@ -19,7 +19,7 @@ class UserController
             }
         }
 
-        $itensPage = 2;
+        $itensPage = 5;
         $start = $itensPage * $page - $itensPage;
         $rows_count = App::get('database')->countAll('users');
 
@@ -76,7 +76,7 @@ class UserController
         $pesquisa = filter_input(INPUT_GET,'search');
 
         $users = App::get('database')->busca('users', $pesquisa, 'name');
-        
+
         $pagination = false;
 
         return view("admin/gerenciamento-usuarios", compact('users', 'pagination'));

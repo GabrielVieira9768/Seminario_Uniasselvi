@@ -28,7 +28,7 @@
                 </form>
             </div>
             <div>
-                <button type="button" class="btn" title="Adicionar Novo Post" data-bs-toggle="modal" data-bs-target="#modal-adicionar">
+                <button type="button" class="btn d-flex align-items-center" title="Adicionar Novo Post" data-bs-toggle="modal" data-bs-target="#modal-adicionar">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M720-400v-120H600v-80h120v-120h80v120h120v80H800v120h-80Zm-360-80q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm80-80h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0-80Zm0 400Z"/></svg>
                     <span>Adicionar Post</span>
                 </button>
@@ -79,8 +79,14 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <?php if($posts == null){ ?>
+            <div class="d-flex justify-content-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm-40-160h80v-240h-80v240ZM330-120 120-330v-300l210-210h300l210 210v300L630-120H330Zm34-80h232l164-164v-232L596-760H364L200-596v232l164 164Zm116-280Z"/></svg>
+                Nenhum Post encontrado!
+            </div>
+        <?php } ?>
 
-        <?php if($pagination){require('app/views/components/pagination.php');} ?>
+        <?php if($pagination && $posts != null){require('app/views/components/pagination.php');} ?>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
