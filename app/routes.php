@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\UserController;
+use App\Controllers\PostController;
 
     // Rotas para o gerenciamento de usuários
     $router->get('usuarios', 'UserController@index');
@@ -10,6 +11,8 @@ use App\Controllers\UserController;
     $router->post('usuarios/delete', 'UserController@delete');
 
     // Rotas para o gerenciamento de posts
+    $router->get('posts', 'PostController@index');
+
 
     // Rotas para autenticação
 

@@ -7,7 +7,6 @@ use Exception;
 
 class UserController
 {
-
     public function index()
     {
         $page = 1;
