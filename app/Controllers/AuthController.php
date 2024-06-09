@@ -20,7 +20,7 @@ class AuthController
                 $_SESSION['login'] = true;
                 $_SESSION['email'] = $_POST["email"];
     
-                header('Location: /usuarios');
+                header('Location: /area-administrativa');
                 exit;
             } else {
                 $message = "Email ou senha incorretos!";

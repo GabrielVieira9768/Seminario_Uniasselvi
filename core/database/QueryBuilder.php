@@ -16,7 +16,7 @@ class QueryBuilder
 
     public function selectAll($table, $start = null, $itensPage = null)
     {
-        $sql = "select * from {$table}";
+        $sql = sprintf('SELECT * FROM %s ORDER BY id DESC', $table);
 
         if($start >= 0 && $itensPage > 0) {
             $sql .= " LIMIT {$start}, {$itensPage}";

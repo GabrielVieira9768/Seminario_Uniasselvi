@@ -6,6 +6,9 @@
 
     session_start();
 
+    // Rota para Dashboard
+    $router->get('area-administrativa', 'UserController@indexDashboard');
+
     // Rotas para o gerenciamento de usuários
     $router->get('usuarios', 'UserController@index');
     $router->get('usuarios/busca', 'UserController@search');

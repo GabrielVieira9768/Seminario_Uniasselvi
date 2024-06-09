@@ -19,7 +19,7 @@ class PostController
             }
         }
 
-        $itensPage = 5;
+        $itensPage = 4;
         $start = $itensPage * $page - $itensPage;
         $rows_count = App::get('database')->countAll('posts');
 

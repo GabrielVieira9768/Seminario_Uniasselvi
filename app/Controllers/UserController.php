@@ -19,7 +19,7 @@ class UserController
             }
         }
 
-        $itensPage = 5;
+        $itensPage = 4;
         $start = $itensPage * $page - $itensPage;
         $rows_count = App::get('database')->countAll('users');
 
@@ -80,6 +80,14 @@ class UserController
         $pagination = false;
 
         return view("admin/gerenciamento-usuarios", compact('users', 'pagination'));
+    }
+
+    public function indexDashboard()
+    {
+        $users = App::get('database')->selectAll('users');
+        $posts = App::get('database')->selectAll('posts');
+
+        return view("admin/dashboard", compact('users', 'posts'));
     }
 }
 
