@@ -9,26 +9,26 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="title" class="form-label">Título</label>
-                        <input type="text" name="title" class="form-control" id="title">
+                        <input type="text" name="title" class="form-control" id="title" required>
                     </div>
                     <div class="mb-3 d-flex justify-content-between">
                         <div>
                             <label for="author" class="form-label">Autor</label>
-                            <input type="text" name="author" class="form-control" id="author">
+                            <input type="text" name="author" class="form-control" id="author" required>
                         </div>
                         <div>
                             <label for="date" class="form-label">Data</label>
-                            <input type="date" name="date" class="form-control" id="date">
+                            <input type="date" name="date" class="form-control" id="date" required>
                         </div>
                     </div>
                     <div>
                         <label for="image" class="form-label">Imagem</label>
-                        <input id="image-0" type="file" class="form-control" name="image" accept="image/*" onchange="loadFile(event, 0)">
+                        <input id="image-0" type="file" class="form-control" name="image" accept="image/*" onchange="loadFile(event, 0)" required>
                         <img id="output-0" class="img-fluid mb-3 rounded"/>
                     </div>
                     <div class="mb-3">
                         <label for="Content" class="form-label">Conteúdo</label>
-                        <textarea type="text" name="content" class="form-control" id="Content" rows="4" style="resize: none"></textarea>
+                        <textarea type="text" name="content" class="form-control" id="Content" rows="4" style="resize: none" required></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">

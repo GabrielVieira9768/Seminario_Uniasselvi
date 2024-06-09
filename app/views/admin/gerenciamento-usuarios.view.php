@@ -46,7 +46,7 @@
                     <td>NOME</td>
                     <td>EMAIL</td>
                     <td>TELEFONE</td>
-                    <td>AÇÕES</td>
+                    <td class="text-center">AÇÕES</td>
                 </tr>
             </thead>
             <tbody>

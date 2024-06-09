@@ -9,26 +9,26 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="title" class="form-label">Título</label>
-                        <input value="<?php echo $post->title; ?>" type="text" name="title" class="form-control" id="title">
+                        <input value="<?php echo $post->title; ?>" type="text" name="title" class="form-control" id="title" required>
                     </div>
                     <div class="mb-3 d-flex justify-content-between">
                         <div>
                             <label for="author" class="form-label">Autor</label>
-                            <input value="<?php echo $post->author; ?>" type="text" name="author" class="form-control" id="author">
+                            <input value="<?php echo $post->author; ?>" type="text" name="author" class="form-control" id="author" required>
                         </div>
                         <div>
                             <label for="date" class="form-label">Data</label>
-                            <input value="<?php echo $post->date; ?>" type="date" name="date" class="form-control" id="date">
+                            <input value="<?php echo $post->date; ?>" type="date" name="date" class="form-control" id="date" required>
                         </div>
                     </div>
                     <div>
                         <label for="image" class="form-label">Imagem</label>
-                        <input id="image-<?php echo $post->id; ?>" type="file" class="form-control" name="image" accept="image/*" onchange="loadFile(event, <?php echo $post->id; ?>)">
+                        <input id="image-<?php echo $post->id; ?>" type="file" class="form-control" name="image" accept="image/*" onchange="loadFile(event, <?php echo $post->id; ?>)" required>
                         <img id="output-<?php echo $post->id; ?>" class="img-fluid mb-3 rounded"/>
                     </div>
                     <div class="mb-3">
                         <label for="Content" class="form-label">Conteúdo</label>
-                        <textarea type="text" name="content" class="form-control" id="Content" rows="4" style="resize: none"><?php echo $post->content; ?></textarea>
+                        <textarea type="text" name="content" class="form-control" id="Content" rows="4" style="resize: none" required><?php echo $post->content; ?></textarea>
                     </div>
                     <input type="hidden" name="id" value="<?= $post->id ?>">
                 </div>

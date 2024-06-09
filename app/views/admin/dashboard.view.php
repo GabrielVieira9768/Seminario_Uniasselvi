@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Posts</title>
+    <title>Área Administrativa</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/css/dashboard-style.css">
@@ -14,6 +14,12 @@
 
 <body>
     <?php require('app/views/components/sidebar.php'); ?>
+
+    <div class="d-flex justify-content-center mb-5 mt-2">
+        <header>
+            <h2>Área Administrativa</h2>
+        </header>
+    </div>
 
     <div class="container mb-5">
         <div class="d-flex justify-content-center flex-wrap">
@@ -48,7 +54,7 @@
         </div>
     </div>
     <div class="mb-5">
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center mb-3">
             <h2>
                 <span>Últimos Posts</span>
             </h2>

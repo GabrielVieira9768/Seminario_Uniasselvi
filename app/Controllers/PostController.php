@@ -35,10 +35,38 @@ class PostController
         return view('admin/gerenciamento-posts', compact('posts','page','total_pages', 'pagination'));
     }
 
+    public function indexHome()
+    {
+        $posts = App::get('database')->selectAll('posts');
+        return view('site/index', compact('posts'));
+    }
+
     public function indexPosts()
     {
-        $posts = App::get('database')->lastFive('posts');
-        return view('site/index', compact('posts'));
+        $page = 1;
+
+        if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
+            $page = intval($_GET['pagina']);
+
+            if($page <= 0){
+                return redirect('posts');
+            }
+        }
+
+        $itensPage = 10;
+        $start = $itensPage * $page - $itensPage;
+        $rows_count = App::get('database')->countAll('posts');
+
+        if($start > $rows_count)
+        {
+            return redirect('posts');
+        }
+
+        $posts = App::get('database')->selectAll('posts', $start, $itensPage);
+        $total_pages = ceil($rows_count/$itensPage);
+        $pagination = true;
+
+        return view('site/lista-posts', compact('posts','page','total_pages', 'pagination'));
     }
 
     public function create()
@@ -118,6 +146,19 @@ class PostController
         $pagination = false;
 
         return view("admin/gerenciamento-posts", compact('posts', 'pagination'));
+    }
+
+    public function searchPosts()
+    {
+        $pesquisa = filter_input(INPUT_GET,'search');
+
+        $postsByTitle = App::get('database')->busca('posts', $pesquisa, 'title');
+        $postsByAuthor = App::get('database')->busca('posts', $pesquisa, 'author');
+        $posts = array_unique(array_merge($postsByTitle, $postsByAuthor), SORT_REGULAR);
+
+        $pagination = false;
+
+        return view("site/lista-posts", compact('posts', 'pagination'));
     }
 }
 

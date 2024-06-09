@@ -24,7 +24,9 @@
     $router->post('posts/delete', 'PostController@delete');
 
     // Rotas de acesso livre
-    $router->get('', 'PostController@indexPosts');
+    $router->get('', 'PostController@indexHome');
+    $router->get('lista-posts/busca', 'PostController@searchPosts');
+    $router->get('lista-posts', 'PostController@indexPosts');
 
     // Rota para logout
     $router->get('login', 'AuthController@index');

@@ -9,25 +9,25 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nome</label>
-                        <input type="text" name="name" class="form-control" id="name">
+                        <input type="text" name="name" class="form-control" id="name" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" class="form-control" id="email">
+                        <input type="email" name="email" class="form-control" id="email" required>
                     </div>
                     <div class="mb-3 d-flex justify-content-between">
                         <div>
                             <label for="cpf" class="form-label">CPF</label>
-                            <input type="text" name="cpf" class="form-control" id="cpf">
+                            <input type="text" name="cpf" class="form-control" id="cpf" required>
                         </div>
                         <div>
                             <label for="phone" class="form-label">Telefone</label>
-                            <input type="text" name="phone" class="form-control" id="phone">
+                            <input type="text" name="phone" class="form-control" id="phone" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Senha</label>
-                        <input type="password" name="password" class="form-control" id="password">
+                        <input type="password" name="password" class="form-control" id="password" required>
                     </div>
                 </div>
                 <div class="modal-footer">
