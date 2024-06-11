@@ -69,13 +69,20 @@ class PostController
         return view('site/lista-posts', compact('posts','page','total_pages', 'pagination'));
     }
 
+    public function indexUnique()
+    {
+        $post = (object)App::get('database')->find('posts', $_POST['id']);
+
+        return view('site/post-individual', compact('post'));
+    }
+
     public function create()
     {
         $arquivo = $_FILES['image']['name'];
         $novoNome = uniqid();
         $pasta = 'public/img/';
         $extencao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
-        $deuCerto = move_uploaded_file($_FILES['image']['tmp_name'], $pasta . $novoNome . "." . $extencao);
+        move_uploaded_file($_FILES['image']['tmp_name'], $pasta . $novoNome . "." . $extencao);
 
         $parameters = [
             'title' => $_POST['title'],
@@ -119,7 +126,6 @@ class PostController
             $pasta = 'public/img/';
             $extencao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
             $caminhoNovaImagem = $pasta . $novoNome . "." . $extencao;
-
             move_uploaded_file($_FILES['image']['tmp_name'], $caminhoNovaImagem);
 
             $parameters['image'] = $caminhoNovaImagem;

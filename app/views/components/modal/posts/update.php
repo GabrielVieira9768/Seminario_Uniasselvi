@@ -23,7 +23,7 @@
                     </div>
                     <div>
                         <label for="image" class="form-label">Imagem</label>
-                        <input id="image-<?php echo $post->id; ?>" type="file" class="form-control" name="image" accept="image/*" onchange="loadFile(event, <?php echo $post->id; ?>)" required>
+                        <input id="image-<?php echo $post->id; ?>" type="file" class="form-control" name="image" accept="image/*" onchange="loadFile(event, <?php echo $post->id; ?>)">
                         <img id="output-<?php echo $post->id; ?>" class="img-fluid mb-3 rounded"/>
                     </div>
                     <div class="mb-3">

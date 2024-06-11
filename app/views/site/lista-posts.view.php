@@ -34,14 +34,26 @@
 
     <div class="d-flex justify-content-center flex-wrap mx-4">
         <?php foreach ($posts as $post) : ?>
-            <div class="card mx-2 mb-3 d-flex" style="height: 200px; width: 540px;">
-                <img src="/<?= $post->image; ?>" class="card-img-left flex-grow-0 fixed-width-image rounded-start" alt="Imagem do post">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $post->title ?></h5>
-                    <p class="card-text"><?php echo $post->content ?></p>
-                    <p class="card-text"><small class="text-body-secondary"><?php echo date('d/m/Y', strtotime($post->date)); ?></small></p>
-                </div>
+            <div class="mx-2 mb-3">
+                <form action="post" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $post->id ?>">
+                    <button type="submit" class="btn m-0 p-0 ">
+                        <div class="card d-flex" style="height: 200px; width: 540px;">
+                            <img src="/<?= $post->image; ?>" class="card-img-left flex-grow-0 fixed-width-image rounded-start" alt="Imagem do post">
+                            <div class="card-body d-flex flex-column justify-content-between text-left">
+                                <div>
+                                    <h5 class="card-title" style="text-align: left;"><?php echo $post->title ?></h5>
+                                    <p class="card-text" style="text-align: left;"><?php echo substr($post->content, 0, 160) . "..." ?></p>
+                                </div>
+                                <div class="mt-auto">
+                                    <p class="card-text" style="text-align: left;"><small class="text-body-secondary"><?php echo date('d/m/Y', strtotime($post->date)); ?></small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </form>
             </div>
+
         <?php endforeach; ?>
     </div>
 

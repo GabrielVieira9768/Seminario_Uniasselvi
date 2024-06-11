@@ -27,6 +27,7 @@
     $router->get('', 'PostController@indexHome');
     $router->get('lista-posts/busca', 'PostController@searchPosts');
     $router->get('lista-posts', 'PostController@indexPosts');
+    $router->post('post', 'PostController@indexUnique');
 
     // Rota para logout
     $router->get('login', 'AuthController@index');
