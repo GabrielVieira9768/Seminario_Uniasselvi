@@ -32,8 +32,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn" data-bs-dismiss="modal">Fechar</button>
-                    <button type="submit" class="btn">Confirmar</button>
+                    <button type="button" class="btn modal-botao" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn modal-botao">Confirmar</button>
                 </div>
             </form>
         </div>

@@ -26,7 +26,7 @@
             </h2>
         </div>
         <div class="d-flex justify-content-center flex-wrap mx-4">
-            <?php foreach (array_slice($posts, 0, 6) as $post) : ?>
+            <?php foreach (array_slice($posts, 0, 3) as $post) : ?>
                 <div class="card mx-2 mb-3" style="width: 18rem;">
                     <img src="/<?= $post->image; ?>" class="card-img-top fixed-height-image" alt="Imagem do post">
                     <div class="card-body">

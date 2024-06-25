@@ -1,0 +1,14 @@
+.sidebar-corpo {
+    background-color: #333e50;
+    color: white;
+}
+
+.span-text-sidebar {
+    color: white;
+    margin-left: 4px;
+    font-weight: 600;
+}
+
+.span-text-sidebar:hover {
+    color: #f1debd;
+}

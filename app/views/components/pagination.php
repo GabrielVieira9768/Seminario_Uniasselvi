@@ -2,7 +2,7 @@
     <ul class="pagination">
         <li class="page-item <?= $page <= 1 ? "disabled" : "" ?>">
             <a class="page-link" href="?pagina=<?= $page - 1 ?>" aria-label="Previous">
-                <span class="text-dark" aria-hidden="true">&laquo;</span>
+                <span aria-hidden="true">&laquo;</span>
             </a>
         </li>
         
@@ -12,7 +12,7 @@
         
         <li class="page-item <?= $page >= $total_pages ? "disabled" : "" ?>">
             <a class="page-link" href="?pagina=<?= $page + 1 ?>" aria-label="Next">
-                <span class="text-dark" aria-hidden="true">&raquo;</span>
+                <span aria-hidden="true">&raquo;</span>
             </a>
         </li>
     </ul>

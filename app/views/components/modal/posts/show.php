@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn modal-botao" data-bs-dismiss="modal">Fechar</button>
             </div>
         </div>
     </div>

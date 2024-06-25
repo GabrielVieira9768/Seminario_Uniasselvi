@@ -115,8 +115,7 @@ class QueryBuilder
     }
 
     public function busca($table, $pesquisa, $campo){
-        $sql = "SELECT * FROM {$table} WHERE {$campo} LIKE '%$pesquisa%'";
-
+        $sql = "SELECT * FROM {$table} WHERE {$campo} LIKE '%$pesquisa%' ORDER BY id DESC";
         try {
             $statement = $this->pdo->prepare($sql);
             $statement->execute();

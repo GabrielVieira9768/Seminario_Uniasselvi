@@ -18,11 +18,11 @@
                     <div class="mb-3 d-flex justify-content-between">
                         <div>
                             <label for="cpf" class="form-label">CPF</label>
-                            <input type="text" name="cpf" class="form-control" id="cpf" required>
+                            <input type="text" name="cpf" class="form-control cpf-mask" maxlength="14" id="cpf" required>
                         </div>
                         <div>
                             <label for="phone" class="form-label">Telefone</label>
-                            <input type="text" name="phone" class="form-control" id="phone" required>
+                            <input type="text" name="phone" class="form-control phone-mask" maxlength="15" id="phone" required>
                         </div>
                     </div>
                     <div class="mb-3">
@@ -31,8 +31,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn" data-bs-dismiss="modal">Fechar</button>
-                    <button type="submit" class="btn">Confirmar</button>
+                    <button type="button" class="btn modal-botao" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn modal-botao">Confirmar</button>
                 </div>
             </form>
         </div>

@@ -13,27 +13,27 @@
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input value="<?php echo $user->email; ?>"" type=" email" name="email" class="form-control" id="email" required>
+                        <input value="<?php echo $user->email; ?>" type=" email" name="email" class="form-control" id="email" required>
                     </div>
                     <div class="mb-3 d-flex justify-content-between">
                         <div>
                             <label for="cpf" class="form-label">CPF</label>
-                            <input value="<?php echo $user->cpf; ?>"" type=" text" name="cpf" class="form-control" id="cpf" required>
+                            <input value="<?php echo $user->cpf; ?>" type=" text" name="cpf" class="form-control cpf-mask" id="cpf" required>
                         </div>
                         <div>
                             <label for="phone" class="form-label">Telefone</label>
-                            <input value="<?php echo $user->phone; ?>"" type=" text" name="phone" class="form-control" id="phone" required>
+                            <input value="<?php echo $user->phone; ?>" type=" text" name="phone" class="form-control phone-mask" id="phone" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Senha</label>
-                        <input value="<?php echo $user->password; ?>"" type=" password" name="password" class="form-control" id="password" required>
+                        <input value="<?php echo $user->password; ?>" type=" password" name="password" class="form-control" id="password" required>
                     </div>
                     <input type="hidden" name="id" value="<?= $user->id ?>">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn" data-bs-dismiss="modal">Fechar</button>
-                    <button type="submit" class="btn">Confirmar</button>
+                    <button type="button" class="btn modal-botao" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn modal-botao">Confirmar</button>
                 </div>
             </form>
         </div>
