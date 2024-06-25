@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="container-fluid d-flex justify-content-between align-items-center mx-4">
         <a class="navbar-brand" href="/">
-            <img src="public/assets/logo.png" alt="Logo" width="36" height="28s" class="d-inline-block align-text-top rounded">
+            <img src="public/assets/logo.png" alt="Logo" width="36" height="28" class="d-inline-block align-text-top rounded" style="margin-right: 2px;">
             PixelPlay
         </a>
         <div class="" id="navbarNav">
