@@ -1,5 +1,29 @@
+body {
+    background-color: #f1debd;
+    font-family: "Noto Serif", serif;
+}
+
+.card-body {
+    background-color: #333e50;
+    color: white;
+}
+
 .fixed-height-image {
     height: 200px;
     width: auto;
     object-fit: cover;
+}
+
+.botao-posts {
+    background-color: #d1d6da;
+    color: black;
+}
+
+.botao-posts:hover {
+    background-color: #acb2b6;
+    color: black;
+}
+
+.span-text {
+    margin-left: 2px;
 }

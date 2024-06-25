@@ -1,5 +1,42 @@
+body {
+    background-color: #f1debd;
+    font-family: "Noto Serif", serif;
+}
+
+.card-post {
+    transition: transform 0.3s ease;
+}
+
+.card-post:hover {
+    transform: scale(1.03);
+}
+
+.card-body {
+    flex-grow: 1;
+    background-color: #333e50;
+}
+
+.card-title, .card-text {
+    color: white !important;
+    text-align: left;
+}
+
 .fixed-height-image {
     height: 200px;
     width: auto;
     object-fit: cover;
+}
+
+.botao-index {
+    background-color: #d1d6da;
+    color: black;
+}
+
+.botao-index:hover {
+    background-color: #acb2b6;
+    color: black;
+}
+
+.span-text {
+    margin-left: 2px;
 }

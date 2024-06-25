@@ -11,4 +11,5 @@
 
 .span-text-sidebar:hover {
     color: #f1debd;
+    text-decoration: underline;
 }
