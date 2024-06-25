@@ -9,12 +9,12 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="title" class="form-label">Título</label>
-                        <input type="text" name="title" class="form-control" id="title" required>
+                        <input type="text" name="title" class="form-control" id="title" placeholder="Título do post" required>
                     </div>
                     <div class="mb-3 d-flex justify-content-between">
                         <div>
                             <label for="author" class="form-label">Autor</label>
-                            <input type="text" name="author" class="form-control" id="author" required>
+                            <input type="text" name="author" class="form-control" id="author" placeholder="Autor do post" required>
                         </div>
                         <div>
                             <label for="date" class="form-label">Data</label>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="Content" class="form-label">Conteúdo</label>
-                        <textarea type="text" name="content" class="form-control" id="Content" rows="4" style="resize: none" required></textarea>
+                        <textarea type="text" name="content" class="form-control" id="Content" rows="4" placeholder="Escreva o texto aqui..." style="resize: none" required></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
