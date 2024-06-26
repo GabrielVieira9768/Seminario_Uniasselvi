@@ -7,7 +7,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body text-center">
                 <img src="/<?= $post->image; ?>" class="rounded img-fluid" alt="Imagem do post ampliada">
             </div>
         </div>

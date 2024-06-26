@@ -5,23 +5,20 @@
         </div>
 
         <div>
-            <a href="" class="me-4 text-reset">
+            <a href="https://www.facebook.com" class="me-4 text-reset">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="" class="me-4 text-reset">
+            <a href="https://x.com" class="me-4 text-reset">
                 <i class="fab fa-twitter"></i>
             </a>
-            <a href="" class="me-4 text-reset">
+            <a href="https://gmail.com" class="me-4 text-reset">
                 <i class="fab fa-google"></i>
             </a>
-            <a href="" class="me-4 text-reset">
+            <a href="https://instagram.com" class="me-4 text-reset">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="" class="me-4 text-reset">
+            <a href="https://linkedin.com" class="me-4 text-reset">
                 <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-github"></i>
             </a>
         </div>
     </section>

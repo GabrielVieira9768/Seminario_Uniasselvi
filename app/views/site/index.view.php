@@ -69,7 +69,7 @@
                 <p>Em nosso blog, você encontrará análises detalhadas, notícias frescas, entrevistas com desenvolvedores e muito mais. Nosso objetivo é ser a sua fonte confiável de informações e insights sobre o universo dos jogos, sempre buscando oferecer conteúdo que enriqueça sua experiência gaming.</p>
             </div>
             <div class="slogan d-flex align-items-center">
-                <img src="public/assets/logo.png" alt="Logo da Game Over" class="rounded">
+                <img style="max-width: 460px;" src="public/assets/galeria_de_jogos.jpeg" alt="Logo da Game Over" class="rounded">
             </div>
         </div>
     </div>
