@@ -66,7 +66,7 @@ class PostController
         $total_pages = ceil($rows_count/$itensPage);
         $pagination = true;
 
-        return view('site/lista-posts', compact('posts','page','total_pages', 'pagination'));
+        return view('site/galeria', compact('posts','page','total_pages', 'pagination'));
     }
 
     public function indexUnique()
@@ -164,7 +164,7 @@ class PostController
 
         $pagination = false;
 
-        return view("site/lista-posts", compact('posts', 'pagination'));
+        return view("site/galeria", compact('posts', 'pagination'));
     }
 }
 

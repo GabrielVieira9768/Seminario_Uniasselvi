@@ -28,6 +28,7 @@
     $router->get('galeria/busca', 'PostController@searchPosts');
     $router->get('galeria', 'PostController@indexPosts');
     $router->post('post', 'PostController@indexUnique');
+    $router->post('galeria/post', 'PostController@indexUnique');
 
     // Rota para logout
     $router->get('login', 'AuthController@index');

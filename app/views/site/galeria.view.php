@@ -55,7 +55,9 @@
                                         <p class="card-text"><?php echo substr($post->content, 0, 160) . "..." ?></p>
                                     </div>
                                     <div class="mt-auto">
-                                        <p class="card-text" style="text-align: right !important;"><small class=""><?php echo date('d/m/Y', strtotime($post->date)); ?></small></p>
+                                        <p class="card-text" style="text-align: right !important;">
+                                            <small class=""><?php echo date('d/m/Y', strtotime($post->date)); ?></small> - <small><?php echo $post->author ?></small>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
