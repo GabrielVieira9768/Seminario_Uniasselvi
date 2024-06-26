@@ -41,8 +41,14 @@
                             ?>
                         </div>
                         <div class="col-md-5 d-flex justify-content-end mb-2">
-                            <div class="image-container">
+                            <div class="image-container position-relative">
                                 <img src="/<?= $post->image; ?>" class="img-fluid rounded" alt="Imagem do post">
+                                <button class="btn position-absolute top-0 end-0 mt-2 me-2 botao-expand" title="Expandir Imagem" data-bs-toggle="modal" data-bs-target="#modal-expand">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="white">
+                                        <path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z" />
+                                    </svg>
+                                </button>
+                                <?php require('app/views/components/modal/image/expand.php'); ?>
                             </div>
                         </div>
                     </div>

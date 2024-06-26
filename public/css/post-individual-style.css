@@ -19,3 +19,30 @@ body {
 .image-container {
     width: 480px;
 }
+
+/* Modal de Expansão */
+.modal-content {
+    background-color: #333e50;
+    color: white;
+}
+
+.botao-expand {
+    background-color: #333e50;
+    opacity: 80%;
+    border: none;
+}
+
+.botao-expand:hover {
+    opacity: 100%;
+    background-color: #212b41;
+    border: none;
+}
+
+.botao-expand:active {
+    background-color: #333e50;
+    border: none;
+}
+
+.botao-fechar:focus {
+    border: none !important;
+}

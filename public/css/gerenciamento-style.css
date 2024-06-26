@@ -82,6 +82,10 @@ input[type="search"]::-webkit-search-results-decoration {
     color: white;
 }
 
+.botao-fechar:focus {
+    border: none !important;
+}
+
 .form-control:focus {
     box-shadow: none;
     border-color: #333e50;
