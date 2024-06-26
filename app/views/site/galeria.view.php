@@ -52,7 +52,7 @@
                                 <div class="card-body d-flex flex-column justify-content-between text-left">
                                     <div>
                                         <h5 class="card-title"><?php echo $post->title ?></h5>
-                                        <p class="card-text conteudo"><?php echo substr($post->content, 0, 120) . "..." ?></p>
+                                        <p class="card-text conteudo"><?php echo substr($post->content, 0, 160) . "..." ?></p>
                                     </div>
                                     <div class="mt-auto">
                                         <p class="card-text" style="text-align: right !important;">

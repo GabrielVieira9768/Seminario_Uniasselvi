@@ -16,7 +16,7 @@
                     <div class="mb-3 d-flex justify-content-between">
                         <div style="width: 100%; margin-right: 10px;">
                             <label for="author" class="form-label">Autor</label>
-                            <input value="<?php echo $post->author; ?>" type="text" name="author" class="form-control" id="author" required>
+                            <input value="<?php echo $post->author; ?>" type="text" name="author" class="form-control" id="author" required readonly>
                         </div>
                         <div style="width: 100%; margin-left: 10px;">
                             <label for="date" class="form-label">Data</label>

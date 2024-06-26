@@ -19,7 +19,7 @@ class PostController
             }
         }
 
-        $itensPage = 4;
+        $itensPage = 5;
         $start = $itensPage * $page - $itensPage;
         $rows_count = App::get('database')->countAll('posts');
 
@@ -53,7 +53,7 @@ class PostController
             }
         }
 
-        $itensPage = 10;
+        $itensPage = 8;
         $start = $itensPage * $page - $itensPage;
         $rows_count = App::get('database')->countAll('posts');
 

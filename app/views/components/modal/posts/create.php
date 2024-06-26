@@ -16,7 +16,7 @@
                     <div class="mb-3 d-flex justify-content-start">
                         <div style="width: 100%; margin-right: 10px;">
                             <label for="author" class="form-label">Autor</label>
-                            <input type="text" name="author" class="form-control" id="author" placeholder="Autor do post" required>
+                            <input value="<?php echo $_SESSION['auth'][0]->name ?>" type="text" name="author" class="form-control" id="author" placeholder="Autor do post" required readonly>
                         </div>
                         <div style="width: 100%; margin-left: 10px;">
                             <label for="date" class="form-label">Data</label>

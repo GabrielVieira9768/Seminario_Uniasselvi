@@ -17,6 +17,7 @@ class AuthController
             $logged = App::get('database')->check('users', $_POST["email"], $_POST["password"]);
     
             if (!empty($logged)) {
+                $_SESSION['auth'] = $logged;
                 $_SESSION['login'] = true;
                 $_SESSION['email'] = $_POST["email"];
     

@@ -68,10 +68,10 @@
             <?php foreach (array_slice($posts, 0, 4) as $post) : ?>
                 <div class="card mx-2" style="width: 18rem;">
                     <img src="/<?= $post->image; ?>" class="card-img-top fixed-height-image" alt="Imagem do post">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column justify-content-between">
                         <h5 class="card-title"><?php echo $post->title ?></h5>
                         <p class="card-text"><?php echo date('d/m/Y', strtotime($post->date)); ?></p>
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex flex-column align-items-center mt-auto">
                             <form method="post" action="post">
                                 <input type="hidden" name="id" value="<?php echo $post->id ?>">
                                 <button type="submit" class="btn d-flex align-items-center botao-posts">

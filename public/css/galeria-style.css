@@ -73,6 +73,10 @@ input[type="search"]::-webkit-search-results-decoration {
     font-weight: 400;
 }
 
+.card-title {
+    font-size: 18px;
+}
+
 .conteudo {
     text-align: justify;
     font-size: 14px;

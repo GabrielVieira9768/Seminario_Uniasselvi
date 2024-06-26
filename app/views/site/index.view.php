@@ -41,10 +41,11 @@
             <?php foreach (array_slice($posts, 0, 3) as $post) : ?>
                 <div class="card mx-3 mb-3 card-post">
                     <img src="/<?= $post->image; ?>" class="card-img-top fixed-height-image" alt="Imagem do post">
-                    <div class="card-body rounded">
+                    <div class="card-body rounded d-flex flex-column justify-content-between">
                         <h5 class="card-title"><?php echo $post->title ?></h5>
                         <p class="card-text"><?php echo $post->author; ?></p>
-                        <div class="d-flex justify-content-center">
+                        <!-- Outros conteúdos do post, se houver -->
+                        <div class="d-flex flex-column align-items-center mt-auto">
                             <form method="post" action="post">
                                 <input type="hidden" name="id" value="<?php echo $post->id ?>">
                                 <button type="submit" class="btn d-flex align-items-center botao-index">
@@ -57,6 +58,7 @@
                         </div>
                     </div>
                 </div>
+
             <?php endforeach; ?>
         </div>
     </div>
