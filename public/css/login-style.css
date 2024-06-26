@@ -48,6 +48,7 @@ body {
     background-color: #d1d6da;
     color: black;
     width: 100%;
+    border: none;
 }
 
 .botao-login:hover {
@@ -55,6 +56,15 @@ body {
     color: black;
 }
 
+.botao-login:active {
+    background-color: #acb2b6 !important;
+    color: black !important;
+}
+
 .link-login {
     color: white;
+}
+
+.link-login:hover {
+    color: #f1debd;
 }

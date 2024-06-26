@@ -11,6 +11,11 @@ td {
     background-color: #f1debd !important;
 }
 
+.titulo {
+    font-size: 44px;
+    font-weight: 600;
+}
+
 .thead-tabela {
     font-weight: 600;
 }

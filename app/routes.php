@@ -25,8 +25,8 @@
 
     // Rotas de acesso livre
     $router->get('', 'PostController@indexHome');
-    $router->get('lista-posts/busca', 'PostController@searchPosts');
-    $router->get('lista-posts', 'PostController@indexPosts');
+    $router->get('galeria/busca', 'PostController@searchPosts');
+    $router->get('galeria', 'PostController@indexPosts');
     $router->post('post', 'PostController@indexUnique');
 
     // Rota para logout

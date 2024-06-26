@@ -22,7 +22,7 @@
 
     <div class="d-flex justify-content-center mb-5 mt-2">
         <header>
-            <h2>Área Administrativa</h2>
+            <h2 class="titulo-dash">Área Administrativa</h2>
         </header>
     </div>
 
@@ -60,8 +60,8 @@
     </div>
     <div class="mb-5">
         <div class="d-flex justify-content-center mb-3">
-            <h2>
-                <span>Últimos Posts</span>
+            <h2 class="titulo-posts">
+                Últimos Posts
             </h2>
         </div>
         <div class="d-flex justify-content-center flex-wrap">
