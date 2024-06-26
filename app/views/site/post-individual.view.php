@@ -22,15 +22,25 @@
     <?php require('app/views/components/navbar.php'); ?>
     <div class="container my-5">
         <div class="">
-            <h2 class="text-left"><?php echo $post->title ?></h2>
-            <p class="card-text"><small class="text-body-secondary"> DATA: <?php echo date('d/m/Y', strtotime($post->date)); ?></small></p>
+            <h2 class="text-left post-title"><?php echo $post->title ?></h2>
+            <p class="card-text author-date"><small class="text-body-secondary"><?php echo $post->author ?> - <?php echo date('d/m/Y', strtotime($post->date)); ?></small></p>
             <div class="align-items-center custom-post-container">
                 <div class="image-container">
                     <img src="/<?= $post->image; ?>" class="img-fluid rounded" alt="Imagem do post">
                 </div>
+                <br>
                 <div class="text-container">
                     <div class="pl-md-3">
-                        <p class="card-text"><?php echo $post->content ?></p>
+                        <?php
+                        $linhas = explode("\n", $post->content);
+
+                        foreach ($linhas as $linha) {
+                            $linha = trim($linha);
+                            if (!empty($linha)) {
+                                echo '<p class="card-text conteudo">' . nl2br($linha) . '</p>';
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
             </div>

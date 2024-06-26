@@ -2,3 +2,16 @@ body {
     background-color: #f1debd;
     font-family: "Noto Serif", serif;
 }
+
+.post-title {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.author-date {
+    font-size: 18px;
+}
+
+.conteudo {
+    text-align: justify;
+}

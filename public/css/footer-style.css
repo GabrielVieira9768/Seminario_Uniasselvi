@@ -4,6 +4,7 @@ footer {
 }
 
 footer section, footer .copy {
+    text-decoration: none;
     color: white;
     border-color: #f1debd;
 }
@@ -14,4 +15,9 @@ footer section, footer .copy {
 
 .link-footer:hover {
     text-decoration: underline;
+}
+
+footer .copy p {
+    margin: 0;
+    font-weight: 300;
 }

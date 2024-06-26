@@ -8,7 +8,7 @@
     <title>Lista de Posts</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/css/lista-posts-style.css">
+    <link rel="stylesheet" href="/public/css/galeria-style.css">
     <link rel="stylesheet" href="/public/css/navbar-style.css">
     <link rel="stylesheet" href="/public/css/pagination-style.css">
     <link rel="stylesheet" href="/public/css/footer-style.css">
@@ -52,7 +52,7 @@
                                 <div class="card-body d-flex flex-column justify-content-between text-left">
                                     <div>
                                         <h5 class="card-title"><?php echo $post->title ?></h5>
-                                        <p class="card-text"><?php echo substr($post->content, 0, 160) . "..." ?></p>
+                                        <p class="card-text conteudo"><?php echo substr($post->content, 0, 120) . "..." ?></p>
                                     </div>
                                     <div class="mt-auto">
                                         <p class="card-text" style="text-align: right !important;">

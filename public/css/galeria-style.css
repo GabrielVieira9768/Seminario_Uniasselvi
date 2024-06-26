@@ -66,4 +66,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .card-title, .card-text {
     color: white !important;
     text-align: left;
+    font-weight: 400;
+}
+
+.conteudo {
+    text-align: justify;
+    font-size: 14px;
 }
