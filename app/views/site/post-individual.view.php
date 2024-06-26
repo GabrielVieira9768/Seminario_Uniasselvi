@@ -22,27 +22,32 @@
     <?php require('app/views/components/navbar.php'); ?>
     <div class="container my-5">
         <div class="">
-            <h2 class="text-left post-title"><?php echo $post->title ?></h2>
-            <p class="card-text author-date"><small class="text-body-secondary"><?php echo $post->author ?> - <?php echo date('d/m/Y', strtotime($post->date)); ?></small></p>
-            <div class="align-items-center custom-post-container">
-                <div class="image-container">
-                    <img src="/<?= $post->image; ?>" class="img-fluid rounded" alt="Imagem do post">
-                </div>
-                <br>
-                <div class="text-container">
-                    <div class="pl-md-3">
-                        <?php
-                        $linhas = explode("\n", $post->content);
+            <div>
+                <h2 class="text-left post-title"><?php echo $post->title ?></h2>
+                <p class="card-text author-date"><small class="text-body-secondary"><?php echo $post->author ?> - <?php echo date('d/m/Y', strtotime($post->date)); ?></small></p>
 
-                        foreach ($linhas as $linha) {
-                            $linha = trim($linha);
-                            if (!empty($linha)) {
-                                echo '<p class="card-text conteudo">' . nl2br($linha) . '</p>';
+                <div class="text-container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <?php
+                            $linhas = explode("\n", $post->content);
+
+                            foreach ($linhas as $linha) {
+                                $linha = trim($linha);
+                                if (!empty($linha)) {
+                                    echo '<p class="card-text conteudo">' . nl2br($linha) . '</p>';
+                                }
                             }
-                        }
-                        ?>
+                            ?>
+                        </div>
+                        <div class="col-md-5 d-flex justify-content-end mb-2">
+                            <div class="image-container">
+                                <img src="/<?= $post->image; ?>" class="img-fluid rounded" alt="Imagem do post">
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

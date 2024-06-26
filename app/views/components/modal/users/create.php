@@ -16,11 +16,11 @@
                         <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
                     </div>
                     <div class="mb-3 d-flex justify-content-between">
-                        <div>
+                        <div style="margin-right: 10px;">
                             <label for="cpf" class="form-label">CPF</label>
                             <input type="text" name="cpf" class="form-control cpf-mask" maxlength="14" id="cpf" placeholder="000.000.000-00" required>
                         </div>
-                        <div>
+                        <div style="margin-left: 10px;">
                             <label for="phone" class="form-label">Telefone</label>
                             <input type="text" name="phone" class="form-control phone-mask" maxlength="15" id="phone" placeholder="(00) 00000-0000" required>
                         </div>

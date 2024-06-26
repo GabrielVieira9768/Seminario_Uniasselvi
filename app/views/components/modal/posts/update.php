@@ -12,11 +12,11 @@
                         <input value="<?php echo $post->title; ?>" type="text" name="title" class="form-control" id="title" required>
                     </div>
                     <div class="mb-3 d-flex justify-content-between">
-                        <div>
+                        <div class="me-3" style="width: 100%;">
                             <label for="author" class="form-label">Autor</label>
                             <input value="<?php echo $post->author; ?>" type="text" name="author" class="form-control" id="author" required>
                         </div>
-                        <div>
+                        <div style="width: 100%;">
                             <label for="date" class="form-label">Data</label>
                             <input value="<?php echo $post->date; ?>" type="date" name="date" class="form-control" id="date" required>
                         </div>

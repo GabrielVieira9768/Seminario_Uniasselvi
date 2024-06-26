@@ -15,3 +15,7 @@ body {
 .conteudo {
     text-align: justify;
 }
+
+.image-container {
+    width: 480px;
+}

@@ -41,13 +41,13 @@
             </div>
         </div>
 
-        <div class="d-flex justify-content-center flex-wrap mx-4">
+        <div class="d-flex justify-content-center flex-wrap mx-4 mb-2">
             <?php foreach ($posts as $post) : ?>
                 <div class="mx-2 mb-3 card-post">
                     <form action="post" method="POST">
                         <input type="hidden" name="id" value="<?php echo $post->id ?>">
-                        <button type="submit" class="btn m-0 p-0 ">
-                            <div class="card d-flex" style="height: 200px; width: 540px;">
+                        <button type="submit" class="btn m-0 p-0">
+                            <div class="card d-flex borda-post" style="height: 200px; width: 540px;">
                                 <img src="/<?= $post->image; ?>" class="card-img-left flex-grow-0 fixed-width-image rounded-start" alt="Imagem do post">
                                 <div class="card-body d-flex flex-column justify-content-between text-left">
                                     <div>

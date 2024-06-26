@@ -15,7 +15,7 @@
                         <label for="author" class="form-label">Autor</label>
                         <input value="<?php echo $post->author; ?>" type="text" name="author" class="form-control" id="author" readonly>
                     </div>
-                    <div>
+                    <div style="margin-left: 10px;">
                         <label for="date" class="form-label">Data</label>
                         <input value="<?php echo date('d/m/Y', strtotime($post->date)); ?>" type="text" name="date" class="form-control" id="date" readonly>
                     </div>

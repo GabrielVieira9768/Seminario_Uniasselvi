@@ -24,7 +24,7 @@
             <div class="title-login mb-2">
                 <h2>Bem Vindo!</h2>
             </div>
-            <div class="">
+            <div class="w-75">
                 <form action="/login" method="POST">
                     <div class="mb-3">
                         <label for="email">Email:</label>
@@ -54,6 +54,7 @@
             </div>
         </div>
     </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

@@ -11,12 +11,12 @@
                         <label for="title" class="form-label">Título</label>
                         <input type="text" name="title" class="form-control" id="title" placeholder="Título do post" required>
                     </div>
-                    <div class="mb-3 d-flex justify-content-between">
-                        <div>
+                    <div class="mb-3 d-flex justify-content-start">
+                        <div class="me-3" style="width: 100%;">
                             <label for="author" class="form-label">Autor</label>
                             <input type="text" name="author" class="form-control" id="author" placeholder="Autor do post" required>
                         </div>
-                        <div>
+                        <div style="width: 100%;">
                             <label for="date" class="form-label">Data</label>
                             <input type="date" name="date" class="form-control" id="date" required>
                         </div>
@@ -24,7 +24,7 @@
                     <div>
                         <label for="image" class="form-label">Imagem</label>
                         <input id="image-0" type="file" class="form-control" name="image" accept="image/*" onchange="loadFile(event, 0)" required>
-                        <img id="output-0" class="img-fluid mb-3 rounded"/>
+                        <img id="output-0" class="img-fluid mb-3 rounded" />
                     </div>
                     <div class="mb-3">
                         <label for="Content" class="form-label">Conteúdo</label>

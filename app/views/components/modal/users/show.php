@@ -15,11 +15,11 @@
                     <input value="<?php echo $user->email; ?>" type=" email" name="email" class="form-control" id="email" readonly>
                 </div>
                 <div class="mb-3 d-flex justify-content-between">
-                    <div>
+                    <div style="margin-right: 10px;">
                         <label for="cpf" class="form-label">CPF</label>
                         <input value="<?php echo $user->cpf; ?>" type=" text" name="cpf" class="form-control" id="cpf" readonly>
                     </div>
-                    <div>
+                    <div style="margin-left: 10px;">
                         <label for="phone" class="form-label">Telefone</label>
                         <input value="<?php echo $user->phone; ?>" type=" text" name="phone" class="form-control" id="phone" readonly>
                     </div>
