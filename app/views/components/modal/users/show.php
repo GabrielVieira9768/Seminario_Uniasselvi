@@ -16,21 +16,21 @@
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input value="<?php echo $user->email; ?>" type=" email" name="email" class="form-control" id="email" readonly>
+                    <input value="<?php echo $user->email; ?>" type="email" name="email" class="form-control" id="email" readonly>
                 </div>
                 <div class="mb-3 d-flex justify-content-between">
                     <div style="margin-right: 10px;">
                         <label for="cpf" class="form-label">CPF</label>
-                        <input value="<?php echo $user->cpf; ?>" type=" text" name="cpf" class="form-control" id="cpf" readonly>
+                        <input value="<?php echo $user->cpf; ?>" type="text" name="cpf" class="form-control" id="cpf" readonly>
                     </div>
                     <div style="margin-left: 10px;">
                         <label for="phone" class="form-label">Telefone</label>
-                        <input value="<?php echo $user->phone; ?>" type=" text" name="phone" class="form-control" id="phone" readonly>
+                        <input value="<?php echo $user->phone; ?>" type="text" name="phone" class="form-control" id="phone" readonly>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Senha</label>
-                    <input value="<?php echo $user->password; ?>" type=" password" name="password" class="form-control" id="password" readonly>
+                    <input value="<?php echo $user->password; ?>" type="password" name="password" class="form-control" id="password" readonly>
                 </div>
             </div>
             <div class="modal-footer">
