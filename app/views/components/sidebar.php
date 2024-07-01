@@ -6,7 +6,10 @@
 
 <div class="offcanvas offcanvas-start sidebar-corpo" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">NAVEGAÇÃO</h5>
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="/public/assets/logo.png" alt="Logo" width="36" height="28" class="d-inline-block align-text-top rounded" style="margin-right: 2px;">
+            <span class="titulo-sidebar">Game Over</span>
+        </a>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
