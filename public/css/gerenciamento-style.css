@@ -9,6 +9,7 @@ tr {
 
 td {
     background-color: #f1debd !important;
+    vertical-align: middle !important;
 }
 
 .titulo {
